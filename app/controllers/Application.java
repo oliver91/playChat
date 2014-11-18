@@ -6,7 +6,6 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.WebSocket;
 import views.html.index;
-import assets.js.ws;
 
 public class Application extends Controller {
 
@@ -17,9 +16,8 @@ public class Application extends Controller {
     }
 
     // get the ws.js script
-    public static Result wsJs()
-    {
-        return ok(ws.render());
+    public static Result wsJs() {
+        return ok(views.js.ws.render());
     }
 
     // Websocket interface

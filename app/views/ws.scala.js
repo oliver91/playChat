@@ -1,4 +1,3 @@
-
 $(function(){
 
     // get websocket class, firefox has a different way to get it
@@ -14,8 +13,7 @@ $(function(){
     socket.onmessage = writeMessages;
 
     $('#socket-input').keyup(function(event){
-        var charCode = (event.which) ? event.which : event.keyCode ;
-
+        var charCode = (event.which) ? event.which : event.keyCode;
         // if enter (charcode 13) is pushed, send message, then clear input field
         if(charCode === 13){
             socket.send($(this).val());
